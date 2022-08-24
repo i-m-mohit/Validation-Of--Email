@@ -17,14 +17,16 @@ public class SearchEmail {
 
         System.out.println("Enter Email ID to search");
         Scanner string = new Scanner(System.in);
-        String searcElement = string.nextLine();
+        String searchElement = string.nextLine();
 
 
         System.out.println("The list of Email is as follows:");
-        for (int i = 0; i < emailID.size(); i++) {
-            System.out.println(emailID.get(i));
+        for (int j = 0; j < emailID.size(); j++) {
+            System.out.println(emailID.get(j));
+        }
 
-            if (searcElement.equals(emailID.get(i))) {
+        for (int i = 0; i < emailID.size(); i++) {
+            if (searchElement.equals(emailID.get(i))) {
                 flag = 1;
                 line = i;
                 break;
@@ -32,7 +34,7 @@ public class SearchEmail {
         }
 
             if (flag == 1) {
-                System.out.println("\nEmail ID " + searcElement + " found at line " + (line + 1));
+                System.out.println("\nEmail ID " + searchElement + " found at line " + (line + 1));
             } else {
                 System.out.println("\nEmail ID is not found");
 
